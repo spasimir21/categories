@@ -50,7 +50,7 @@ function App() {
           </p>
         </div>
         <div className='shadow-lg py-4 px-8 flex flex-col items-center gap-4 rounded-lg'>
-          <p className='font-bold text-lg'>Categories</p>
+          <p className='font-bold text-lg'>Categories (Second Branch)</p>
           {categories.length > 0 ? (
             categories.map(category => (
               <div
