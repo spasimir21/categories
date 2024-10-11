@@ -46,7 +46,7 @@ function App() {
             placeholder='Name'
           />
           <p onClick={createCategory} className='px-4 py-1 bg-green-500 rounded-lg cursor-pointer text-white font-bold'>
-            {loading ? '...' : 'Add a Category'}
+            Add a Category
           </p>
         </div>
         <div className='shadow-lg py-4 px-8 flex flex-col items-center gap-4 rounded-lg'>
