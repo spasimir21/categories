@@ -1,5 +1,6 @@
 import sqlite3 from 'sqlite3';
 import express from 'express';
+import cors from 'cors';
 
 const db = new sqlite3.Database('./database.db');
 
@@ -14,6 +15,7 @@ const db = new sqlite3.Database('./database.db');
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   db.serialize(() => {
@@ -28,7 +30,7 @@ app.post('/', (req, res) => {
 
   db.run(`INSERT INTO categories (ID, Name) VALUES (?, ?)`, [id, req.body.name]);
 
-  res.json({ id, name: req.body.name });
+  res.json({ ID: id, Name: req.body.name });
 });
 
 app.delete('/:id', (req, res) => {
